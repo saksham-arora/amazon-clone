@@ -1,0 +1,23 @@
+.home {
+  max-width: 1600px; /* To stop the stretching of the screen after 1500 px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto; /* If not set to auto then, while zooming out the screen remains intact to the left */
+  margin-right: auto;
+}
+
+.home_img {
+  /* display: flex; */ /* No issues if you don't make it flex */
+  width: 100%;
+  z-index: -1;
+  margin-bottom: -150px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+.home_row {
+  display: flex;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}

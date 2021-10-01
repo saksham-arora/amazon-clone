@@ -1,0 +1,34 @@
+display : flex => Used to create responsive layouts as its children can adjust according to the changing
+screen size => It makes an image also responsive
+
+align-items : center => This propery is used to specify the layout of the children in the flexbox
+
+object-fit : contain => This property is used to resize an image to contain into specific dimensions
+=> maintains the aspect ratio. In order to make an image good, we need to set its max height and instead of stretch we need to maintain its aspect ratio
+In order to align items in the home tab, we can align the items vertically and horizontally by setting display as flex and align-items to be center
+
+for some flex components, it becomes necessary to give max-height and max-width
+
+If an image stretches out of the screeen, we need to set its width to 100%
+
+border bottom can add a border below the text
+
+
+----------------------------------------------GLOBAL STATE MANAGEMENT---------------------------------------------------------
+1] Instead of passing info through different components with the help of props we can use a global data layer that can store data from any component and deliver to 
+any component. In order to implement this we have used the StateProvider.js. 
+In the file, we just have two functions. First is used to put the data into the stream with the help of a reducer.
+Other is used to pull the data from the data stream
+
+2] We wrap our app with the newly created stateprovider in index.
+In this case, we need to pass in two arguments. First is the initial state of the data and the second is the reducer.
+
+3] Reducer is basically a listener to the change in the data. It is mainly used to shoot the data in the data stream.
+In reducer.js, we basically state the initial state and define the listener or the reducer which is imported in index.js
+
+4] In the Product.js we add the item to the basket. Any update in the basket automatically updates the places they are being used at
+
+useHistory can be used to navigate the website because it keeps the button styling as it is.
+Link actually acts as a link that alters the styling
+
+
